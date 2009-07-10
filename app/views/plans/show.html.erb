@@ -1,0 +1,18 @@
+<p>
+  <b>Content:</b>
+  <%=h @plan.content %>
+</p>
+
+<p>
+  <b>Note:</b>
+  <%=h @plan.note %>
+</p>
+
+<p>
+  <b>Priority:</b>
+  <%=h @plan.priority %>
+</p>
+
+
+<%= link_to 'Edit', edit_plan_path(@plan) %> |
+<%= link_to 'Back', plans_path %>

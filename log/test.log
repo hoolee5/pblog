@@ -1,0 +1,59 @@
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "plans" [0m
+
+
+Processing PlansController#create (for 0.0.0.0 at 2009-07-08 12:53:55) [POST]
+  Parameters: {"plan"=>{}}
+  [4;35;1mPlan Create (0.9ms)[0m   [0mINSERT INTO "plans" ("created_at", "updated_at", "priority", "content", "note") VALUES('2009-07-08 04:53:55', '2009-07-08 04:53:55', NULL, NULL, NULL)[0m
+Redirected to http://test.host/plans/996332878
+Completed in 37ms (DB: 6) | 302 Found [http://test.host/plans?]
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSELECT count(*) AS count_all FROM "plans" [0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT count(*) AS count_all FROM "plans" [0m
+  [4;36;1mPlan Load (1.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+
+
+Processing PlansController#destroy (for 0.0.0.0 at 2009-07-08 12:53:55) [DELETE]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mPlan Load (1.3ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+  [4;36;1mPlan Destroy (0.7ms)[0m   [0;1mDELETE FROM "plans" WHERE "id" = 953125641[0m
+Redirected to http://test.host/plans
+Completed in 8ms (DB: 5) | 302 Found [http://test.host/plans/953125641]
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "plans" [0m
+  [4;36;1mPlan Load (2.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+
+
+Processing PlansController#edit (for 0.0.0.0 at 2009-07-08 12:53:55) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 14ms (View: 12, DB: 3) | 200 OK [http://test.host/plans/953125641/edit]
+
+
+Processing PlansController#index (for 0.0.0.0 at 2009-07-08 12:53:55) [GET]
+  [4;36;1mPlan Load (0.9ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 10ms (View: 8, DB: 1) | 200 OK [http://test.host/plans]
+
+
+Processing PlansController#new (for 0.0.0.0 at 2009-07-08 12:53:55) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://test.host/plans/new]
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+
+
+Processing PlansController#show (for 0.0.0.0 at 2009-07-08 12:53:55) [GET]
+  Parameters: {"id"=>"953125641"}
+  [4;36;1mPlan Load (0.7ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 6ms (View: 3, DB: 1) | 200 OK [http://test.host/plans/953125641]
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+
+
+Processing PlansController#update (for 0.0.0.0 at 2009-07-08 12:53:55) [PUT]
+  Parameters: {"plan"=>{}, "id"=>"953125641"}
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 953125641) [0m
+Redirected to http://test.host/plans/953125641
+Completed in 6ms (DB: 1) | 302 Found [http://test.host/plans/953125641?]

@@ -1,0 +1,2522 @@
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (4.6ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090707092253)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090707092253')[0m
+Migrating to CreateTags (20090707092327)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090707092327')[0m
+Migrating to CreatePostsTags (20090707092349)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "posts_tags" ("name" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090707092349')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts_tags")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090707092253)
+Migrating to CreateTags (20090707092327)
+Migrating to CreatePostsTags (20090707092349)
+Migrating to CreatePlans (20090708045042)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "plans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "note" text, "priority" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090708045042')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("plans")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("posts_tags")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.8ms)[0m   [0;1mCREATE TABLE "plans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "note" text, "priority" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (6.8ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.3ms)[0m   [0;1mCREATE TABLE "posts_tags" ("name" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (8.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (5.8ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090708045042')[0m
+  [4;35;1mSQL (3.4ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090707092253')[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20090707092349')[0m
+  [4;35;1mSQL (4.1ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20090707092327')[0m
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 13:01:47) [GET]
+  [4;36;1mPlan Load (1.3ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 99ms (View: 77, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (6.4ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (5.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090707092253)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090707092253')[0m
+Migrating to CreateTags (20090707092327)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090707092327')[0m
+Migrating to CreatePostsTags (20090707092349)
+  [4;36;1mSQL (1.5ms)[0m   [0;1mCREATE TABLE "posts_tags" ("name" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090707092349')[0m
+Migrating to CreatePlans (20090708045042)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "plans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "note" text, "priority" integer, "finished" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090708045042')[0m
+  [4;36;1mSQL (1.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("plans")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("posts_tags")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 13:03:26) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 62ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:03:27) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 68ms (View: 35, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:12:47) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 90ms (View: 49, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:13:46) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 157ms (View: 145, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:14:41) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 31ms (View: 19, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:16:39) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+ERROR: compiling _run_erb_app47views47plans47new46html46erb RAISED compile error
+/home/wuyu/workspace/pblog/app/views/plans/new.html.erb:16: syntax error, unexpected tLBRACK, expecting kDO or '{' or '('
+...oncat(( f.select :prority ,o [['normal',0],['high', 1]] ).to...
+                              ^
+Function body:           def _run_erb_app47views47plans47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New plan</h1>\n\n"
+
+;  form_for(@plan) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :content ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :content ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :note ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :note ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :prority ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( f.select :prority ,o [['normal',0],['high', 1]] ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', plans_path ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/wuyu/workspace/pblog/app/views/plans/new.html.erb:27:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:943:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:135:in `custom'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:179:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:173:in `respond'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/wuyu/workspace/pblog/app/controllers/plans_controller.rb:29:in `new'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1322:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/wuyu/workspace/pblog/app/views/plans/new.html.erb:16: syntax error, unexpected tLBRACK, expecting kDO or '{' or '('
+...oncat(( f.select :prority ,o [['normal',0],['high', 1]] ).to...
+                              ^) on line #16 of app/views/plans/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :prority %>
+16:     <%= f.select :prority ,o [['normal',0],['high', 1]] %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Create' %>
+
+    app/views/plans/new.html.erb:27:in `compile!'
+    app/controllers/plans_controller.rb:29:in `new'
+
+Rendered rescues/_trace (195.7ms)
+Rendered rescues/_request_and_response (10.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:17:23) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+
+ActionView::TemplateError (undefined method `prority' for #<Plan:0xb7599c0c>) on line #16 of app/views/plans/new.html.erb:
+13:   </p>
+14:   <p>
+15:     <%= f.label :prority %>
+16:     <%= f.select :prority, [['normal',0],['high', 1]] %>
+17:   </p>
+18:   <p>
+19:     <%= f.submit 'Create' %>
+
+    app/views/plans/new.html.erb:16
+    app/views/plans/new.html.erb:3
+    app/controllers/plans_controller.rb:29:in `new'
+
+Rendered rescues/_trace (132.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 13:19:33) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 30ms (View: 13, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#create (for 127.0.0.1 at 2009-07-08 13:19:40) [POST]
+  Parameters: {"plan"=>{"priority"=>"0", "note"=>"", "content"=>"RESTful Rails"}, "commit"=>"Create", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4="}
+  [4;36;1mPlan Create (0.9ms)[0m   [0;1mINSERT INTO "plans" ("created_at", "updated_at", "priority", "content", "note", "finished") VALUES('2009-07-08 05:19:40', '2009-07-08 05:19:40', 0, 'RESTful Rails', '', NULL)[0m
+Redirected to http://localhost:3000/plans/1
+Completed in 52ms (DB: 1) | 302 Found [http://localhost/plans]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 13:19:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 35ms (View: 10, DB: 1) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 13:20:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 41ms (View: 21, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 13:20:15) [PUT]
+  Parameters: {"plan"=>{"priority"=>"1", "note"=>"", "content"=>"RESTful Rails", "finished"=>"0"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;36;1mPlan Update (0.8ms)[0m   [0;1mUPDATE "plans" SET "updated_at" = '2009-07-08 05:20:15', "finished" = 'f', "priority" = 1 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/plans/1
+Completed in 47ms (DB: 1) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 13:20:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 13:49:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (13.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 221ms (View: 13, DB: 13) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 13:51:59) [GET]
+  [4;35;1mPlan Load (1.0ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 28ms (View: 10, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 13:52:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 28ms (View: 5, DB: 1) | 200 OK [http://localhost/plans/1]
+  [4;36;1mPlan Load (0.4ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."created_at" = '2009-07-08 14:00:13') LIMIT 1[0m
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."created_at" = '2009-07-08') LIMIT 1[0m
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;35;1mSQL (1.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090707092253)
+Migrating to CreateTags (20090707092327)
+Migrating to CreatePostsTags (20090707092349)
+Migrating to CreatePlans (20090708045042)
+Migrating to AddDateToPlan (20090708061148)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mALTER TABLE "plans" ADD "date" date[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090708061148')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("plans")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("posts_tags")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSQLite3::SQLException: database schema has changed: SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (13.1ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (3.9ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090707092253)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090707092253')[0m
+Migrating to CreateTags (20090707092327)
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090707092327')[0m
+Migrating to CreatePostsTags (20090707092349)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "posts_tags" ("name" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090707092349')[0m
+Migrating to CreatePlans (20090708045042)
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCREATE TABLE "plans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "note" text, "priority" integer, "finished" boolean, "date" date) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20090708045042')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("plans")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("posts")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts_tags")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("tags")[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (5.7ms)[0m   [0mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;36;1mSQL (7.8ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20090707092253)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090707092253')[0m
+Migrating to CreateTags (20090707092327)
+  [4;35;1mSQL (0.6ms)[0m   [0mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090707092327')[0m
+Migrating to CreatePostsTags (20090707092349)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "posts_tags" ("name" varchar(255) NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090707092349')[0m
+Migrating to CreatePlans (20090708045042)
+  [4;35;1mSQL (0.8ms)[0m   [0mCREATE TABLE "plans" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "note" text, "priority" integer, "finished" boolean, "date" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090708045042')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("plans")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("posts")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("posts_tags")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("tags")[0m
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:21:29) [GET]
+  [4;35;1mPlan Load (2.7ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 65ms (View: 49, DB: 3) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 14:21:31) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 18ms (View: 7, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#create (for 127.0.0.1 at 2009-07-08 14:21:36) [POST]
+  Parameters: {"plan"=>{"priority"=>"0", "note"=>"", "content"=>"RESTful Rails"}, "commit"=>"Create", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4="}
+  [4;36;1mPlan Create (0.5ms)[0m   [0;1mINSERT INTO "plans" ("created_at", "updated_at", "priority", "date", "content", "note", "finished") VALUES('2009-07-08 06:21:36', '2009-07-08 06:21:36', 0, NULL, 'RESTful Rails', '', NULL)[0m
+Redirected to http://localhost:3000/plans/1
+Completed in 25ms (DB: 0) | 302 Found [http://localhost/plans]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 14:21:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (2.6ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:21:38) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:27:03) [GET]
+
+SyntaxError (/home/wuyu/workspace/pblog/app/models/plan.rb:3: syntax error, unexpected ':', expecting kEND
+    self.finished?'yes':'no'
+                        ^):
+  app/controllers/plans_controller.rb:5:in `index'
+
+Rendered rescues/_trace (85.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:28:10) [GET]
+  [4;35;1mPlan Load (1.0ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 28ms (View: 10, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:28:36) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 141ms (View: 131, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:31:23) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 37ms (View: 20, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:33:03) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 54ms (View: 20, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:33:06) [GET]
+  [4;35;1mPlan Load (2.0ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 26ms (View: 11, DB: 2) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:35:25) [GET]
+  [4;36;1mPlan Load (3.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 34ms (View: 14, DB: 3) | 200 OK [http://localhost/plans]
+/!\ FAILSAFE /!\  Wed Jul 08 14:44:52 +0800 2009
+  Status: 500 Internal Server Error
+  /home/wuyu/workspace/pblog/app/helpers/plans_helper.rb:18: syntax error, unexpected $end, expecting kEND
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /home/wuyu/workspace/pblog/app/controllers/application_controller.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Jul 08 14:44:58 +0800 2009
+  Status: 500 Internal Server Error
+  /home/wuyu/workspace/pblog/app/helpers/plans_helper.rb:18: syntax error, unexpected $end, expecting kEND
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /home/wuyu/workspace/pblog/app/controllers/application_controller.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Jul 08 14:45:07 +0800 2009
+  Status: 500 Internal Server Error
+  /home/wuyu/workspace/pblog/app/helpers/plans_helper.rb:18: syntax error, unexpected $end, expecting kEND
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /home/wuyu/workspace/pblog/app/controllers/application_controller.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Jul 08 14:46:30 +0800 2009
+  Status: 500 Internal Server Error
+  /home/wuyu/workspace/pblog/app/helpers/plans_helper.rb:19: syntax error, unexpected $end, expecting kEND
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /home/wuyu/workspace/pblog/app/controllers/application_controller.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Jul 08 14:46:31 +0800 2009
+  Status: 500 Internal Server Error
+  /home/wuyu/workspace/pblog/app/helpers/plans_helper.rb:19: syntax error, unexpected $end, expecting kEND
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /home/wuyu/workspace/pblog/app/controllers/application_controller.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed Jul 08 14:46:34 +0800 2009
+  Status: 500 Internal Server Error
+  /home/wuyu/workspace/pblog/app/helpers/plans_helper.rb:19: syntax error, unexpected $end, expecting kEND
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:224:in `depend_on'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:136:in `require_dependency'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:126:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:120:in `helper'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/helpers.rb:115:in `helper'
+    /home/wuyu/workspace/pblog/app/controllers/application_controller.rb:5
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:380:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:379:in `load_file'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:259:in `require_or_load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:80:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/dependencies.rb:92:in `const_missing'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:90:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:52:19) [GET]
+  [4;36;1mPlan Load (1.3ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+
+ActionView::TemplateError (undefined method `is_a' for #<Plan:0xb752616c>) on line #7 of app/views/plans/index.html.erb:
+4: <% @plans.each do |plan| %>
+5:   <tr>
+6:     <td><%=h plan.date %></td>
+7:     <td><span class=<%= select_css(plan) %><%= plan.content %></td>
+8:     <td><%= link_to 'Show', plan %></td>
+9:     <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+10:     <td><%= link_to 'Destroy', plan, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/helpers/plans_helper.rb:4:in `select_css'
+    app/views/plans/index.html.erb:7
+    app/views/plans/index.html.erb:4:in `each'
+    app/views/plans/index.html.erb:4
+    app/controllers/plans_controller.rb:7:in `index'
+
+Rendered rescues/_trace (275.6ms)
+Rendered rescues/_request_and_response (2.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:52:37) [GET]
+  [4;35;1mPlan Load (1.0ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 23ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:53:31) [GET]
+  [4;36;1mPlan Load (1.0ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:54:14) [GET]
+  [4;35;1mPlan Load (1.0ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 30ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:54:15) [GET]
+  [4;36;1mPlan Load (1.0ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 14:54:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 29ms (View: 15, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:55:46) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 24ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:55:47) [GET]
+  [4;35;1mPlan Load (2.6ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 48ms (View: 13, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:56:19) [GET]
+  [4;36;1mPlan Load (2.9ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 35ms (View: 20, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:57:32) [GET]
+  [4;35;1mPlan Load (1.4ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mPlan Load (1.0ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:58:41) [GET]
+  [4;36;1mPlan Load (4.4ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+
+ActionView::TemplateError (undefined method `is_finished?' for #<Plan:0xb7a2620c>) on line #7 of app/views/plans/index.html.erb:
+4: <% @plans.each do |plan| %>
+5:   <tr>
+6:     <td><%=h plan.date %></td>
+7:     <td><span class="<%= select_css(plan) %>"><%= plan.content %></span></td>
+8:     <td><%= link_to 'Show', plan %></td>
+9:     <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+10:     <td><%= link_to 'Destroy', plan, :confirm => 'Are you sure?', :method => :delete %></td>
+
+    app/helpers/plans_helper.rb:8:in `select_css'
+    app/views/plans/index.html.erb:7
+    app/views/plans/index.html.erb:4:in `each'
+    app/views/plans/index.html.erb:4
+    app/controllers/plans_controller.rb:7:in `index'
+
+Rendered rescues/_trace (151.3ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 14:59:12) [GET]
+  [4;35;1mPlan Load (1.4ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 30ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 14:59:15) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.7ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 31ms (View: 12, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:00:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 438ms (View: 421, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:00:44) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"0", "note"=>"", "content"=>"RESTful Rails", "finished"=>"0"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;35;1mPlan Update (1.1ms)[0m   [0mUPDATE "plans" SET "updated_at" = '2009-07-08 07:00:44', "finished" = 'f', "date" = '2009-07-08' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/plans/1
+Completed in 58ms (DB: 2) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 15:00:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.7ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 45ms (View: 14, DB: 1) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:00:46) [GET]
+  [4;35;1mPlan Load (1.4ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 33ms (View: 19, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:01:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.7ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 40ms (View: 24, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:01:23) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"1", "note"=>"", "content"=>"RESTful Rails", "finished"=>"0"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;36;1mPlan Update (0.6ms)[0m   [0;1mUPDATE "plans" SET "updated_at" = '2009-07-08 07:01:23', "priority" = 1 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/plans/1
+Completed in 35ms (DB: 1) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 15:01:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.9ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 40ms (View: 7, DB: 1) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:01:26) [GET]
+  [4;36;1mPlan Load (1.8ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 33ms (View: 18, DB: 2) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:01:58) [GET]
+  [4;35;1mPlan Load (1.5ms)[0m   [0mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 33ms (View: 13, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:02:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 48ms (View: 28, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:02:03) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"0", "note"=>"", "content"=>"RESTful Rails", "finished"=>"0"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;36;1mPlan Update (0.8ms)[0m   [0;1mUPDATE "plans" SET "updated_at" = '2009-07-08 07:02:03', "priority" = 0 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/plans/1
+Completed in 40ms (DB: 2) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 15:02:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 27ms (View: 7, DB: 1) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:02:05) [GET]
+  [4;36;1mPlan Load (1.5ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 58ms (View: 23, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:03:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:03:12) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"0", "note"=>"", "content"=>"RESTful Rails", "finished"=>"1"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;35;1mPlan Update (0.5ms)[0m   [0mUPDATE "plans" SET "updated_at" = '2009-07-08 07:03:12', "finished" = 't' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/plans
+Completed in 26ms (DB: 1) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:03:12) [GET]
+  [4;36;1mPlan Load (1.0ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 22ms (View: 11, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:03:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.9ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 190ms (View: 24, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:03:23) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"1", "note"=>"", "content"=>"RESTful Rails", "finished"=>"1"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+  [4;35;1mPlan Update (0.5ms)[0m   [0mUPDATE "plans" SET "updated_at" = '2009-07-08 07:03:23', "priority" = 1 WHERE "id" = 1[0m
+Redirected to http://localhost:3000/plans
+Completed in 29ms (DB: 1) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:03:23) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 22ms (View: 12, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:06:32) [GET]
+  [4;35;1mPlan Load (1.2ms)[0m   [0mSELECT * FROM "plans" ORDER BY priority DESC, date DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 31ms (View: 9, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:06:34) [GET]
+  [4;36;1mPlan Load (1.2ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY priority DESC, date DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 36ms (View: 18, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 15:06:35) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 29ms (View: 15, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:07:38) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" ORDER BY priority DESC, date DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 15:07:40) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 48ms (View: 21, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#create (for 127.0.0.1 at 2009-07-08 15:07:49) [POST]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"9", "priority"=>"0", "note"=>"", "content"=>"Ruby"}, "commit"=>"Create", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4="}
+  [4;36;1mPlan Create (0.6ms)[0m   [0;1mINSERT INTO "plans" ("created_at", "updated_at", "priority", "date", "content", "note", "finished") VALUES('2009-07-08 07:07:49', '2009-07-08 07:07:49', 0, '2009-07-09', 'Ruby', '', NULL)[0m
+Redirected to http://localhost:3000/plans/2
+Completed in 44ms (DB: 1) | 302 Found [http://localhost/plans]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 15:07:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 2) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 20ms (View: 5, DB: 1) | 200 OK [http://localhost/plans/2]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 15:08:28) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 2) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 20ms (View: 8, DB: 1) | 200 OK [http://localhost/plans/2]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:08:30) [GET]
+  [4;35;1mPlan Load (1.3ms)[0m   [0mSELECT * FROM "plans" ORDER BY priority DESC, date DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:09:37) [GET]
+  [4;36;1mPlan Load (1.3ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY priority DESC, date [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 46ms (View: 18, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:09:38) [GET]
+  [4;35;1mPlan Load (1.3ms)[0m   [0mSELECT * FROM "plans" ORDER BY priority DESC, date [0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:10:33) [GET]
+  [4;36;1mPlan Load (1.3ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 31ms (View: 11, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:10:35) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 2) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/plans/2/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:10:38) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"9", "priority"=>"1", "note"=>"", "content"=>"Ruby", "finished"=>"0"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"2"}
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 2) [0m
+  [4;35;1mPlan Update (0.5ms)[0m   [0mUPDATE "plans" SET "updated_at" = '2009-07-08 07:10:39', "finished" = 'f', "priority" = 1 WHERE "id" = 2[0m
+Redirected to http://localhost:3000/plans
+Completed in 33ms (DB: 1) | 302 Found [http://localhost/plans/2]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:10:39) [GET]
+  [4;36;1mPlan Load (1.4ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 31ms (View: 13, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:10:42) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (1.0ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 53ms (View: 26, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:10:44) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"1", "note"=>"", "content"=>"RESTful Rails", "finished"=>"1"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"1"}
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Redirected to http://localhost:3000/plans
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/plans/1]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:10:44) [GET]
+  [4;35;1mPlan Load (1.3ms)[0m   [0mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 47ms (View: 33, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 15:13:48) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 2) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 19ms (View: 5, DB: 0) | 200 OK [http://localhost/plans/2]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:13:50) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 2) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 29ms (View: 18, DB: 1) | 200 OK [http://localhost/plans/2/edit]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:13:54) [GET]
+  [4;36;1mPlan Load (3.8ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 28ms (View: 13, DB: 4) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 15:13:55) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing PlansController#create (for 127.0.0.1 at 2009-07-08 15:14:01) [POST]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"0", "note"=>"", "content"=>"Java"}, "commit"=>"Create", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4="}
+  [4;35;1mPlan Create (0.5ms)[0m   [0mINSERT INTO "plans" ("created_at", "updated_at", "priority", "date", "content", "note", "finished") VALUES('2009-07-08 07:14:01', '2009-07-08 07:14:01', 0, '2009-07-08', 'Java', '', NULL)[0m
+Redirected to http://localhost:3000/plans
+Completed in 25ms (DB: 0) | 302 Found [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:14:01) [GET]
+  [4;36;1mPlan Load (1.6ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 26ms (View: 15, DB: 2) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 15:14:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 3) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 33ms (View: 16, DB: 1) | 200 OK [http://localhost/plans/3/edit]
+
+
+Processing PlansController#update (for 127.0.0.1 at 2009-07-08 15:14:07) [PUT]
+  Parameters: {"plan"=>{"date(1i)"=>"2009", "date(2i)"=>"7", "date(3i)"=>"8", "priority"=>"0", "note"=>"", "content"=>"Java", "finished"=>"1"}, "commit"=>"Update", "authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"3"}
+  [4;36;1mPlan Load (2.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 3) [0m
+  [4;35;1mPlan Update (0.5ms)[0m   [0mUPDATE "plans" SET "updated_at" = '2009-07-08 07:14:07', "finished" = 't' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/plans
+Completed in 48ms (DB: 3) | 302 Found [http://localhost/plans/3]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:14:07) [GET]
+  [4;36;1mPlan Load (1.5ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 25ms (View: 13, DB: 1) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:16:39) [GET]
+  [4;35;1mPlan Load (1.5ms)[0m   [0mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+Rendering template within layouts/plans
+Rendering plans/index
+
+ActionView::TemplateError (undefined local variable or method `print_date' for #<ActionView::Base:0xb613aea0>) on line #6 of app/views/plans/index.html.erb:
+3: <table>
+4: <% @plans.each do |plan| %>
+5:   <tr>
+6:     <td><%= print_date%></td>
+7:     <td><span class="<%= select_css(plan) %>"><%= plan.content %></span></td>
+8:     <td><%= link_to 'Show', plan %></td>
+9:     <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+
+    app/views/plans/index.html.erb:6
+    app/views/plans/index.html.erb:4:in `each'
+    app/views/plans/index.html.erb:4
+    app/controllers/plans_controller.rb:7:in `index'
+
+Rendered rescues/_trace (264.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mPlan Load (17.1ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:30:11) [GET]
+  [4;36;1mPlan Load (1.5ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :first
+') ORDER BY date DESC LIMIT 1[0m
+Rendering template within layouts/plans
+Rendering plans/index
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #6 of app/views/plans/index.html.erb:
+3: <table>
+4: <% @plans.each do |plan| %>
+5:   <tr>
+6:     <td><%= print_date%></td>
+7:     <td><span class="<%= select_css(plan) %>"><%= plan.content %></span></td>
+8:     <td><%= link_to 'Show', plan %></td>
+9:     <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
+
+    app/views/plans/index.html.erb:6:in `print_date'
+    app/views/plans/index.html.erb:6
+    app/views/plans/index.html.erb:4:in `each'
+    app/views/plans/index.html.erb:4
+    app/controllers/plans_controller.rb:8:in `index'
+
+Rendered rescues/_trace (94.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:30:43) [GET]
+  [4;36;1mPlan Load (5.7ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+  [4;35;1mPlan Load (0.4ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :first
+') ORDER BY date DESC LIMIT 1[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 33ms (View: 14, DB: 6) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:32:50) [GET]
+  [4;36;1mPlan Load (1.4ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+  [4;35;1mPlan Load (0.4ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :first
+') ORDER BY date DESC LIMIT 1[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 103ms (View: 33, DB: 2) | 200 OK [http://localhost/plans]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 15:32:51) [GET]
+  [4;36;1mPlan Load (1.5ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :first
+') ORDER BY date DESC LIMIT 1[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 295ms (View: 273, DB: 2) | 200 OK [http://localhost/plans]
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."date" IS NULL) LIMIT 1[0m
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :all
+') LIMIT 1[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :all
+') LIMIT 1[0m
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."content" = 'ruby') LIMIT 1[0m
+  [4;35;1mPlan Load (1.2ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."content" = 'Java') LIMIT 1[0m
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 17:11:55) [GET]
+  [4;36;1mPlan Load (1.5ms)[0m   [0;1mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+  [4;35;1mPlan Load (0.4ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :first
+') ORDER BY date DESC LIMIT 1[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 26ms (View: 9, DB: 2) | 200 OK [http://localhost/plans]
+  [4;36;1mPlan Load (0.0ms)[0m   [0;1mSQLite3::SQLException: near ",": syntax error: SELECT * FROM "plans" WHERE (date > ?, Date.today) [0m
+  [4;35;1mPlan Load (0.0ms)[0m   [0mSQLite3::SQLException: near ",": syntax error: SELECT * FROM "plans" WHERE (date > ?, Date.today) [0m
+  [4;36;1mPlan Load (1.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08') [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:31:15) [GET]
+
+SyntaxError (/home/wuyu/workspace/pblog/app/controllers/blog_controller.rb:12: syntax error, unexpected tASSOC, expecting ']'
+                           :order => "date DESC")
+                                    ^
+/home/wuyu/workspace/pblog/app/controllers/blog_controller.rb:12: syntax error, unexpected ')', expecting kEND):
+  
+
+Rendered rescues/_trace (68.6ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:31:53) [GET]
+  [4;36;1mPlan Load (1.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+ERROR: compiling _run_erb_app47views47blog47index46html46erb RAISED compile error
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:6: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+...t(( for plan in @today_plans ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47blog47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Blog</h1>\n<div id=\"plans\">\n  <h1>Plans</h1>\n  <div id=\"today_plans\">\n    <h2>Today's Plan</h2>\n    "
+
+
+
+
+; @output_buffer.concat(( for plan in @today_plans ).to_s); @output_buffer.concat "\n    <p class=\""
+; @output_buffer.concat(( select_css(plan) ).to_s); @output_buffer.concat "\">>"; @output_buffer.concat(( h p.content ).to_s); @output_buffer.concat "</p> \n    "
+; @output_buffer.concat " end>\n  </div>\n</div>\n\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/wuyu/workspace/pblog/app/views/blog/index.html.erb:15:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:6: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+...t(( for plan in @today_plans ).to_s); @output_buffer.concat ...
+                              ^) on line #6 of app/views/blog/index.html.erb:
+3:   <h1>Plans</h1>
+4:   <div id="today_plans">
+5:     <h2>Today's Plan</h2>
+6:     <%= for plan in @today_plans %>
+7:     <p class="<%= select_css(plan) %>">><%= h p.content -%></p> 
+8:     <% end>
+9:   </div>
+
+    app/views/blog/index.html.erb:15:in `compile!'
+
+Rendered rescues/_trace (246.4ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:35:43) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+ERROR: compiling _run_erb_app47views47blog47index46html46erb RAISED compile error
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:7: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+...t(( for plan in @today_plans ).to_s); @output_buffer.concat ...
+                              ^
+Function body:           def _run_erb_app47views47blog47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Blog</h1>\n<div id=\"plans\">\n  <h1>Plans</h1>\n  <div id=\"today_plans\">\n    <h2><span class=\"title\">Today's Plan</span>\n      <span class=\"action_link\">"
+
+
+
+
+; @output_buffer.concat(( link_to "new", new_plan_path ).to_s); @output_buffer.concat "</span></h2>\n    "
+; @output_buffer.concat(( for plan in @today_plans ).to_s); @output_buffer.concat "\n    <p class=\""
+; @output_buffer.concat(( select_css(plan) ).to_s); @output_buffer.concat "\">"; @output_buffer.concat(( h plan.content ).to_s); @output_buffer.concat "</p> \n    "
+; @output_buffer.concat " end>\n  </div>\n</div>\n\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/wuyu/workspace/pblog/app/views/blog/index.html.erb:16:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:7: syntax error, unexpected ')', expecting kDO_COND or ':' or '\n' or ';'
+...t(( for plan in @today_plans ).to_s); @output_buffer.concat ...
+                              ^) on line #7 of app/views/blog/index.html.erb:
+4:   <div id="today_plans">
+5:     <h2><span class="title">Today's Plan</span>
+6:       <span class="action_link"><%= link_to "new", new_plan_path %></span></h2>
+7:     <%= for plan in @today_plans %>
+8:     <p class="<%= select_css(plan) %>"><%= h plan.content -%></p> 
+9:     <% end>
+10:   </div>
+
+    app/views/blog/index.html.erb:16:in `compile!'
+
+Rendered rescues/_trace (88.7ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:37:05) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+ERROR: compiling _run_erb_app47views47blog47index46html46erb RAISED compile error
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:14: syntax error, unexpected kENSURE, expecting kEND
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:16: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47blog47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>Blog</h1>\n<div id=\"plans\">\n  <h1>Plans</h1>\n  <div id=\"today_plans\">\n    <h2><span class=\"title\">Today's Plan</span>\n      <span class=\"action_link\">"
+
+
+
+
+; @output_buffer.concat(( link_to "new", new_plan_path ).to_s); @output_buffer.concat "</span></h2>\n    "
+;  @today_plans.each do |p|  ; @output_buffer.concat "\n    <p class=\""
+; @output_buffer.concat(( select_css(p) ).to_s); @output_buffer.concat "\">"; @output_buffer.concat(( h p.content ).to_s); @output_buffer.concat "</p> \n    "
+; @output_buffer.concat " end>\n  </div>\n</div>\n\n"
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/wuyu/workspace/pblog/app/views/blog/index.html.erb:16:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/chunked.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:61:in `process'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/mongrel.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:14: syntax error, unexpected kENSURE, expecting kEND
+/home/wuyu/workspace/pblog/app/views/blog/index.html.erb:16: syntax error, unexpected $end, expecting kEND) on line #14 of app/views/blog/index.html.erb:
+11: </div>
+
+    app/views/blog/index.html.erb:16:in `compile!'
+
+Rendered rescues/_trace (274.2ms)
+Rendered rescues/_request_and_response (0.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:37:39) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 29ms (View: 16, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:37:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:37:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PlansController#new (for 127.0.0.1 at 2009-07-08 17:38:54) [GET]
+Rendering template within layouts/plans
+Rendering plans/new
+Completed in 27ms (View: 13, DB: 0) | 200 OK [http://localhost/plans/new]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:40:09) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 27ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:40:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:40:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:41:45) [GET]
+  [4;35;1mPlan Load (1.2ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 31ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:41:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:41:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:42:50) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.8ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (1.0ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 31ms (View: 16, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:46:13) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 36ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:46:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:46:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:46:57) [GET]
+  [4;36;1mPlan Load (1.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.8ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 175ms (View: 17, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:46:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:46:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 17:46:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 18ms (View: 5, DB: 0) | 200 OK [http://localhost/plans/1]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:47:42) [GET]
+  [4;36;1mPlan Load (1.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 28ms (View: 15, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:47:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:47:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:47:59) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.9ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 44ms (View: 20, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:47:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:47:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:51:06) [GET]
+  [4;36;1mPlan Load (3.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.9ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 36ms (View: 18, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PlansController#destroy (for 127.0.0.1 at 2009-07-08 17:51:15) [DELETE]
+  Parameters: {"authenticity_token"=>"O7UVac7GpgHj8Uth1kCANrFmrFqAB4fuDKSWxnnMS/4=", "id"=>"3"}
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 3) [0m
+  [4;36;1mPlan Destroy (0.4ms)[0m   [0;1mDELETE FROM "plans" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/plans
+Completed in 64ms (DB: 1) | 302 Found [http://localhost/plans/3]
+
+
+Processing PlansController#index (for 127.0.0.1 at 2009-07-08 17:51:15) [GET]
+  [4;35;1mPlan Load (1.7ms)[0m   [0mSELECT * FROM "plans" ORDER BY date DESC, priority DESC[0m
+  [4;36;1mPlan Load (2.4ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."date" = '--- :first
+') ORDER BY date DESC LIMIT 1[0m
+Rendering template within layouts/plans
+Rendering plans/index
+Completed in 26ms (View: 9, DB: 4) | 200 OK [http://localhost/plans]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 17:51:44) [GET]
+  [4;35;1mPlan Load (1.5ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 62ms (View: 9, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:51:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 17:51:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing PlansController#show (for 127.0.0.1 at 2009-07-08 17:51:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/show
+Completed in 177ms (View: 9, DB: 0) | 200 OK [http://localhost/plans/1]
+
+
+Processing PlansController#edit (for 127.0.0.1 at 2009-07-08 18:24:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE ("plans"."id" = 1) [0m
+Rendering template within layouts/plans
+Rendering plans/edit
+Completed in 30ms (View: 18, DB: 1) | 200 OK [http://localhost/plans/1/edit]
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:25:56) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:25:57) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 24ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:25:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:25:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:26:24) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 24ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:26:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:26:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:26:24) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.8ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 87ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:26:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:27:27) [GET]
+  [4;36;1mPlan Load (1.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.5ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.2ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 25ms (View: 8, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:27:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:27:28) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:27:31) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.5ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.2ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:27:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:27:31) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:28:14) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.6ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:28:15) [GET]
+  [4;35;1mPlan Load (1.1ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 32ms (View: 9, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:28:51) [GET]
+  [4;36;1mPlan Load (1.1ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;35;1mPlan Load (0.7ms)[0m   [0mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;36;1mPlan Load (0.3ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 33ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing BlogController#index (for 127.0.0.1 at 2009-07-08 18:28:52) [GET]
+  [4;35;1mPlan Load (1.7ms)[0m   [0mSELECT * FROM "plans" WHERE (date > '2009-07-08' and priority = 1) ORDER BY date Desc[0m
+  [4;36;1mPlan Load (0.6ms)[0m   [0;1mSELECT * FROM "plans" WHERE (date = '2009-07-08') ORDER BY priority DESC[0m
+  [4;35;1mPlan Load (0.3ms)[0m   [0mSELECT * FROM "plans" WHERE (date < '2009-07-08' and priority = 1) ORDER BY date DESC[0m
+Rendering template within layouts/blog
+Rendering blog/index
+Completed in 25ms (View: 11, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/blog.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-07-08 18:28:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/post.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)

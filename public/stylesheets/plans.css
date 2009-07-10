@@ -1,0 +1,12 @@
+.high_priority_not_finished {
+  color: red;
+}
+
+.high_priority_finished {
+  color: green;
+}
+
+.action_link {
+  color: #666;
+  font_size: "9pt";
+}
